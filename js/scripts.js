@@ -9,15 +9,15 @@ function Pizza (size,top,name) {
 Pizza.prototype.sizeCrust = function() {
   debugger;
   //for each loop
-  var sizes = ["large"];
+  var sizes = ["large","medium","small"];
   var crust = this.size;
-  if (crust === sizes){
+  {
     return 15.00
   }
 }
 
 Pizza.prototype.topping = function() {
-  if (this.top ==="pepperoni")
+  if (this.top === "pepperoni")
   return 3.00;
   // this.pepperoni = "3.00";
   //what toppings cost
