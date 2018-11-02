@@ -1,9 +1,10 @@
 function Pizza (size,topp,name) {
+  debugger;
   console.log("pizza")
   this.size = size;
   this.topp = topp;
   this.name = name;
-  this.total = []
+  this.total = [];
 }
 // Pizza.prototype.addOrder= function(){
 //   var newOrder = new Pizza ();
@@ -24,7 +25,7 @@ Pizza.prototype.sizeCrust = function() {
 Pizza.prototype.topping = function() {
   debugger;
   console.log("topping");
-  if (this.top === "pepperoni"){
+  if (this.topp === "pepperoni"){
   return 3.00;
   }
 }
@@ -33,7 +34,7 @@ Pizza.prototype.totalAmount = function() {
   var topping = this.topping();
   var crust = this.sizeCrust();
   total = (topping + crust);
-  this.total.push(total);
+  this.total = total;
   console.log(total);
 }
 
@@ -47,21 +48,23 @@ $(document).ready(function(){
   $("#form").submit(function(event){
     debugger;
     $("#crustSize","#topping").change();
-    // $("#topping").change();
     event.preventDefault();
 
     var lar = $("#crust").val();
     var pepp = $("#top").val();
     var nam = $("#name").val();
     var order = new Pizza(lar,pepp,nam);
-    console.log("order")
+    order.totalAmount($("#result").val());
+
+
   });
 
-    $("#total").on("submit","output", function(){
-console.log("order")
-      var results = order.total;
-      $("#results").input(results);
-    });
+//     $("#total").on("submit","output", function(){
+//       debugger;
+// console.log("order")
+    //   var results = order.total;
+    //   $("#results").input(results);
+    // });
 
 
 
