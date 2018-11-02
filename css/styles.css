@@ -1,9 +1,23 @@
-#form {
+.jumbotron{
   text-align: center;
+}
+
+
+
+#form {
+
   background-color: #ffc;
 }
 #crust {
   width: 100px;
   height: 30px;
-  margin: 50px;
+  margin: 10px;
+}
+#top{
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+}
+#name{
+  margin: 5px;
 }
