@@ -1,13 +1,16 @@
-function Pizza (size,top,name) {
+function Pizza (newOrder) {
   // debugger;
   this.size = size;
   this.top = top;
   this.name = name;
   this.total = 0
 }
+Pizza.prototype.addOrder= function(size,topping,name){
+  var newOrder = new Order(size,topping,name)
+}
 
 Pizza.prototype.sizeCrust = function() {
-  // debugger;
+  debugger;
   var sizes = ["large","medium","small"];
   var crust = this.size;
   // sizes.forEach(function(size){
@@ -20,6 +23,7 @@ Pizza.prototype.sizeCrust = function() {
 }
 
 Pizza.prototype.topping = function() {
+  debugger;
   console.log("topping")
   if (this.top === "pepperoni"){
   return 3.00;
@@ -35,7 +39,7 @@ Pizza.prototype.totalAmount = function() {
   return total;
   console.log(total)
 }
-
+// function Order (size,topping,name)
 // var order = new Pizza("large","pepperoni","alex")
 // order.sizeCrust();
 // order.topping();
@@ -55,18 +59,13 @@ $(document).ready(function(){
     var lar = $("#large").val();
     var pepp = $("#pepp").val();
     var nam = $("#name").val();
-    // $("#CrustSize").change(function(){
-    //
-    // });
-    // console.log($("#CrustSize").change())
-
-
-console.log(lar,pepp,nam)
-
+    order.addOrder(lar,pepp,name)
   });
 
+
 console.log(("#form"))
-
-
-
 });
+
+// $("#thankYou").on("click","div", function(){
+  //need to show thank you your order has been placed
+// })
