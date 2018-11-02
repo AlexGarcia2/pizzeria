@@ -13,8 +13,13 @@
   height: 30px;
   margin: 10px;
 }
-#top{
-  width: 100px;
+#meat{
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+}
+#vegg{
+  width: 150px;
   height: 30px;
   margin: 10px;
 }
@@ -30,7 +35,7 @@
   background-color: #777;
 }
 #result {
-  
+
   color: white;
 }
 #total{

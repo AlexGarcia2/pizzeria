@@ -1,8 +1,9 @@
-function Pizza (size,topp,name) {
+function Pizza (size,meatTopp,veggieTopp,name) {
   // debugger;
   console.log("pizza")
   this.size = size;
-  this.topp = topp;
+  this.meatTopp = meatTopp;
+  this.veggieTopp = veggieTopp;
   this.name = name;
   this.total = [];
 }
@@ -23,28 +24,28 @@ Pizza.prototype.sizeCrust = function() {
   }
   return false;
 }
-
-Pizza.prototype.topping = function() {
+Pizza.prototype.veggieTopping = function() {
   // debugger;
   console.log("topping");
-  if (this.topp === "pepperoni"){
-    return 3.00;
-  }else if (this.topp === "bellpepper") {
-    return 2.00;
-  }else if (this.topp === "mushrooms") {
-    return 2.00;
-  }else if (this.topp === "ham") {
-    return 3.00;
-  }else if (this.topp === "sausage"){
-    return 3.00;
+  if (this.veggieTopp === "bellpepper" || this.veggieTopp === "mushrooms" || this.veggieTopp === "onions"){
+    return 2.00
   }
 
 }
 
+Pizza.prototype.meatTopping = function() {
+  // debugger;
+  console.log("topping");
+  if (this.meatTopp === "ham" || this.meatTopp === "pepperoni" || this.meatTopp === "sausage"){
+    return 3.00;
+  }
+}
+
 Pizza.prototype.totalAmount = function() {
-  var topping = this.topping();
+  var meat = this.meatTopping();
+  var veggie = this.veggieTopping();
   var crust = this.sizeCrust();
-  total = (topping + crust);
+  total = (meat + crust + veggie);
   this.total.push(total);
 
   console.log(total);
@@ -61,11 +62,12 @@ $(document).ready(function(){
     // debugger;
     $("#crustSize","#topping").change();
     event.preventDefault();
-  
+
     var lar = $("#crust").val();
-    var pepp = $("#top").val();
+    var pepp = $("#meat").val();
+    var vegg = $("#vegg").val();
     var nam = $("#name").val();
-    var order = new Pizza(lar,pepp,nam);
+    var order = new Pizza(lar,pepp,vegg,nam);
     order.totalAmount()
     var results = order.total;
     $("#total").show();
