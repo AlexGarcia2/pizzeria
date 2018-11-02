@@ -1,25 +1,30 @@
-function Pizza () {
-  //name of order
-  // what pizza size is
-  //what sizes did the cust order
-  //topping
+function Pizza (size,topping,name) {
+  this.size = size;
+  this.topping = topping;
+  this.name = name;
  this.total = null;
 }
 
 Pizza.prototype.size = function (){
+  this.large = 15.00
   // what sizes cost what amount
 }
 
 Pizza.prototype.total = function () {
-  // calculate topping amount
+  total = this.total
+  total = (this.size + this.pepperoni)
+  
 
 }
 
 Pizza.prototype.topping = function (){
+  this.pepperoni = 3.00
   //what toppings cost
 }
-function Order(size,topping,name){
-  this.size = size;
-  this.topping= topping;
-  this.name = name
-}
+// function Order(size,topping,name){
+//   this.size = size;
+//   this.topping= topping;
+//   this.name = name
+// }
+
+// user interface ----------------
