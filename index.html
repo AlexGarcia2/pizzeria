@@ -11,13 +11,26 @@
   <body>
     <h1>place Order</h1>
     <form id="form">
-    <div id="CrustSize">
-      <select class="custom-select" id="i">
+    <div id="crustSize">
+      <select class="custom-select" id="crust">
         <option selected>Crust Size</option>
-        <option value="1">large</option>
+        <option id="large">large</option>
       </select>
     </div>
+    <div id="topping">
+      <select class="custom-select" id="crust">
+        <option selected>Toppings</option>
+        <option id="pepp">pepperoni</option>
+      </select>
+    </div>
+    <div>
+      <input id="name"type="text" >
+    </div>
+    <button type="submit" name="button">Place order</button>
   </form>
+  <div id="total">
+    <span id="orderTotal"></span>
+  </div>
   </body>
 </html>
 

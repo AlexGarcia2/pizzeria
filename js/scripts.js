@@ -44,14 +44,24 @@ Pizza.prototype.totalAmount = function() {
 
 
 // user interface ----------------
-
+var order = new Pizza();
 $(document).ready(function(){
 
   $("#form").click(function(event){
+    $("#crustSize","#topping").change();
+    // $("#topping").change();
     event.preventDefault();
 
+    var lar = $("#large").val();
+    var pepp = $("#pepp").val();
+    var nam = $("#name").val();
+    // $("#CrustSize").change(function(){
+    //
+    // });
+    // console.log($("#CrustSize").change())
 
 
+console.log(lar,pepp,nam)
 
   });
 
