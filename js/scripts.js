@@ -61,14 +61,15 @@ $(document).ready(function(){
     // debugger;
     $("#crustSize","#topping").change();
     event.preventDefault();
-
+  
     var lar = $("#crust").val();
     var pepp = $("#top").val();
     var nam = $("#name").val();
     var order = new Pizza(lar,pepp,nam);
     order.totalAmount()
     var results = order.total;
-    $("#result").val("total is: " + results +".00");
+    $("#total").show();
+    $("#result").val("total is: " + results +".00" + " dollars.");
 
   });
 

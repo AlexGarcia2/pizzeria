@@ -29,6 +29,13 @@
   height: 200px;
   background-color: #777;
 }
+#result {
+  
+  color: white;
+}
+#total{
+  display: none;
+}
 h5{
   color: white;
   font-size: 20px;
