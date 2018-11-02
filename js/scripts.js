@@ -68,7 +68,7 @@ $(document).ready(function(){
     var order = new Pizza(lar,pepp,nam);
     order.totalAmount()
     var results = order.total;
-    $("#result").val(results);
+    $("#result").val("total is: " + results +".00");
 
   });
 
