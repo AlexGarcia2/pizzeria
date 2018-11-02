@@ -8,17 +8,22 @@ function Pizza (size,top,name) {
 
 Pizza.prototype.sizeCrust = function() {
   debugger;
-  //for each loop
   var sizes = ["large","medium","small"];
   var crust = this.size;
-  {
+  // sizes.forEach(function(size){
+    if(crust === sizes[0]){
     return 15.00
+  }else {
+    return false
   }
+
 }
 
 Pizza.prototype.topping = function() {
-  if (this.top === "pepperoni")
+  console.log("topping")
+  if (this.top === "pepperoni"){
   return 3.00;
+  }
   // this.pepperoni = "3.00";
   //what toppings cost
 }
@@ -27,9 +32,9 @@ Pizza.prototype.totalAmount = function() {
   var topping = this.topping();
   var crust = this.sizeCrust();
   total = (topping + crust);
-  this.total.push(total);
+  return total;
   console.log(total)
-
+console
 }
 
 var order = new Pizza("large","pepperoni","alex")
