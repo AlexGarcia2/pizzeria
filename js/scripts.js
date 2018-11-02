@@ -14,20 +14,31 @@ Pizza.prototype.sizeCrust = function() {
   // debugger;
   var sizes = ["large","medium","small"];
   var crust = this.size;
-    if(crust === sizes[0]){
-    return 15.00
-  }else {
-    return false
+  if(crust === sizes[0]){
+    return 15.00;
+  }else if(crust === sizes[1]){
+    return 12.00;
+  }else if (crust === sizes[2]) {
+    return 10.00;
   }
-
+  return false;
 }
 
 Pizza.prototype.topping = function() {
   // debugger;
   console.log("topping");
   if (this.topp === "pepperoni"){
-  return 3.00;
+    return 3.00;
+  }else if (this.topp === "bellpepper") {
+    return 2.00;
+  }else if (this.topp === "mushrooms") {
+    return 2.00;
+  }else if (this.topp === "ham") {
+    return 3.00;
+  }else if (this.topp === "sausage"){
+    return 3.00;
   }
+
 }
 
 Pizza.prototype.totalAmount = function() {
