@@ -7,10 +7,6 @@ function Pizza (size,meatTopp,veggieTopp,name) {
   this.name = name;
   this.total = [];
 }
-// Pizza.prototype.addOrder= function(){
-//   var newOrder = new Pizza ();
-// }
-
 Pizza.prototype.sizeCrust = function() {
   // debugger;
   var sizes = ["large","medium","small"];
