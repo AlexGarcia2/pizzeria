@@ -7,7 +7,7 @@ function Pizza (size,top,name) {
 }
 
 Pizza.prototype.sizeCrust = function() {
-  debugger;
+  // debugger;
   var sizes = ["large","medium","small"];
   var crust = this.size;
   // sizes.forEach(function(size){
@@ -34,21 +34,29 @@ Pizza.prototype.totalAmount = function() {
   total = (topping + crust);
   return total;
   console.log(total)
-console
 }
 
-var order = new Pizza("large","pepperoni","alex")
-order.sizeCrust();
-order.topping();
-order.totalAmount();
+// var order = new Pizza("large","pepperoni","alex")
+// order.sizeCrust();
+// order.topping();
+// order.totalAmount();
 
 
-// function Order(size,topping,name){
-//   debugger;
-//   this.size = size;
-//   this.topping= topping;
-//   this.name = name
-//
-// }
 
 // user interface ----------------
+
+$(document).ready(function(){
+
+  $("#form").click(function(event){
+    event.preventDefault();
+
+
+
+
+  });
+
+console.log(("#form"))
+
+
+
+});
